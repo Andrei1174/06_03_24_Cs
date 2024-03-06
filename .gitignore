@@ -5,6 +5,7 @@
 
 # dotenv files
 .env
+.Les_DotNet_C.sln
 
 # User-specific files
 *.rsuser
