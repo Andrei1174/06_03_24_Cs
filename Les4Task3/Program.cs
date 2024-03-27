@@ -39,24 +39,41 @@ using System.ComponentModel;
 // сформировать массив состоящий из цифр исходной строки
 // qwe123dg456 => [1, 2, 3, 4, 5, 6]
 
-int GetLettersFromDigits(string s)
+int[] GetLettersFromDigits(string s)
 {
-   int count = default;
-   string letters = "";
-   foreach (char e in s)
-   {     
+    int count = default;
+
+    int[] arr = new int[count];
+
+    string letters = " ";
+
+    foreach (char e in s)
+    {
         if (char.IsAsciiDigit(e) == true)
         {
             letters = letters + e;
             count++;
         }
-   }
-   //Console.WriteLine(count);
-   return count;
+    }
+    Console.WriteLine(letters);
+        // for (int i = 0; i < arr.Length; i++)
+        // {
+        //     arr[i] = ;
+        // }
+    return arr;
 }
-
+void PrintArr(int[]arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.WriteLine(arr[i]+" ");
+    }
+    Console.Write("]");
+}
 
 Console.WriteLine("Введите строку состоящую из цифр и латинских букв");
 string s = Console.ReadLine()!;
-int rezult = GetLettersFromDigits(s);
+int[] rezult = GetLettersFromDigits(s);
 Console.WriteLine(rezult);
+PrintArr(rezult);
